@@ -1,0 +1,436 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+/* sweandrew clone tokens */
+/* Theme palettes. Dark is the default; [data-theme="light"] overrides. */
+/* Default palette "mono": pure neutrals, no accent hue. Dark first. */
+:root {
+  --bg: #0a0a0a;
+  --surface: #121212;
+  --surface-2: #1a1a1a;
+  --line: #262626;
+  --bone: #fafafa;
+  --muted: #a3a3a3;
+  --faint: #6b6b6b;
+  --accent: #f5f5f5;
+  --on-accent: #0a0a0a;
+  --danger: #ff8a80;
+  --scroll-thumb: #333333;
+  --card-highlight: rgb(255 255 255 / 0.04);
+  --card-shadow: rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+/* Mono, light. */
+:root[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f0f0f0;
+  --line: #e2e2e2;
+  --bone: #0a0a0a;
+  --muted: #525252;
+  --faint: #8a8a8a;
+  --accent: #171717;
+  --on-accent: #fafafa;
+  --danger: #c62828;
+  --scroll-thumb: #cfcfcf;
+  --card-highlight: rgb(255 255 255 / 0.9);
+  --card-shadow: rgb(15 23 42 / 0.12);
+  color-scheme: light;
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-bone: var(--bone);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-bone);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar. Chromium ignores ::-webkit-scrollbar-* once scrollbar-width/-color are also set
+   (it falls back to its native thin bar with arrow buttons on Windows), so the standard properties
+   are gated to Firefox, which can't render the webkit pseudo-elements at all. */
+@supports not (-webkit-appearance: none) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+  }
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  transition: background-color 0.2s;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-faint);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:active {
+  background: var(--color-accent);
+  background-clip: padding-box;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.card {
+  /* No backdrop-filter: blurring a canvas that repaints every frame re-rasterizes each card per frame,
+     which is the single costliest effect on weak GPUs. A denser tint keeps the same glassy look. */
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  border: 1px solid var(--color-line);
+  box-shadow:
+    inset 0 1px 0 var(--card-highlight),
+    0 8px 24px -12px var(--card-shadow);
+}
+
+.kicker {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+  font-size: 0.72rem;
+}
+
+.draw-underline {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: background-size 0.7s var(--ease-out-quint);
+}
+.draw-underline.drawn {
+  background-size: 100% 2px;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+/* Ambient depth: a soft corner glow behind everything. Static, no JS. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+body::after {
+  background: radial-gradient(
+    55rem 38rem at 0% 100%,
+    color-mix(in srgb, var(--color-accent) 7%, transparent),
+    transparent 70%
+  );
+}
+
+/* Hairline divider between sections, fading out at both ends. */
+main > section + section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(72rem, calc(100% - 3rem));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--color-line), transparent);
+}
+
+/* Accent hairline that lights up the top edge of a card on hover. */
+.card-accent::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.card-accent:hover::before {
+  opacity: 0.9;
+}
+
+/* Scroll cue: a thin line with a travelling accent segment (transform only). */
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.scroll-cue {
+  position: relative;
+  width: 1px;
+  height: 28px;
+  overflow: hidden;
+  background: var(--color-line);
+}
+.scroll-cue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  animation: scroll-cue 1.8s var(--ease-out-quint) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue::after {
+    animation: none;
+  }
+}
+
+/* Typographic polish: balanced headlines, no orphaned last words in paragraphs. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* On phones the particle sphere sits right behind body copy; dim it so text stays crisp. */
+@media (max-width: 759px) {
+  canvas.fixed {
+    opacity: 0.55;
+  }
+}
+
+/* Palette presets (temporary picker). Default "cobalt" lives in :root above; each preset overrides
+   the dark values via [data-palette] and the light values via [data-palette][data-theme="light"]. */
+:root[data-palette="mint"] {
+  --bg: #08090c; --surface: #0d0f14; --surface-2: #12151c; --line: #1b1f29;
+  --bone: #edeff4; --muted: #8b92a3; --faint: #565d6e;
+  --accent: #5eead4; --on-accent: #042f2a; --scroll-thumb: #2a3040;
+}
+:root[data-palette="mint"][data-theme="light"] {
+  --bg: #f6f7f9; --surface: #ffffff; --surface-2: #eceff4; --line: #dde1e9;
+  --bone: #0e1116; --muted: #4b5365; --faint: #707a8d;
+  --accent: #0f766e; --on-accent: #ffffff; --scroll-thumb: #c5ccd8;
+}
+:root[data-palette="amber"] {
+  --bg: #100f0d; --surface: #181714; --surface-2: #211f1b; --line: #2c2924;
+  --bone: #f2ede3; --muted: #a8a193; --faint: #75705f;
+  --accent: #f2a948; --on-accent: #1d1305; --scroll-thumb: #3b362d;
+}
+:root[data-palette="amber"][data-theme="light"] {
+  --bg: #f4efe6; --surface: #fbf8f2; --surface-2: #ebe5d8; --line: #ddd4c3;
+  --bone: #1c1812; --muted: #5c5547; --faint: #857c6b;
+  --accent: #b4470f; --on-accent: #fff9ef; --scroll-thumb: #cdc3af;
+}
+:root[data-palette="emerald"] {
+  --bg: #090b0a; --surface: #101311; --surface-2: #181c19; --line: #232824;
+  --bone: #eef2ee; --muted: #9aa59c; --faint: #667069;
+  --accent: #4ade80; --on-accent: #04200e; --scroll-thumb: #2f3731;
+}
+:root[data-palette="emerald"][data-theme="light"] {
+  --bg: #f5f8f5; --surface: #ffffff; --surface-2: #ebf0eb; --line: #dbe3db;
+  --bone: #0c140e; --muted: #4a5a4e; --faint: #788a7d;
+  --accent: #15803d; --on-accent: #ffffff; --scroll-thumb: #c3cfc4;
+}
+:root[data-palette="vermilion"] {
+  --bg: #0d0b0b; --surface: #151212; --surface-2: #1e1a19; --line: #2b2524;
+  --bone: #f4eeec; --muted: #a99f9c; --faint: #766c69;
+  --accent: #ff6b4a; --on-accent: #200803; --scroll-thumb: #3a3231;
+}
+:root[data-palette="vermilion"][data-theme="light"] {
+  --bg: #faf6f4; --surface: #ffffff; --surface-2: #f1eae6; --line: #e4dad5;
+  --bone: #1a1210; --muted: #5e514c; --faint: #8d7e78;
+  --accent: #c92a12; --on-accent: #ffffff; --scroll-thumb: #d6c9c3;
+}
+:root[data-palette="mono"] {
+  --bg: #0a0a0a; --surface: #121212; --surface-2: #1a1a1a; --line: #262626;
+  --bone: #fafafa; --muted: #a3a3a3; --faint: #6b6b6b;
+  --accent: #f5f5f5; --on-accent: #0a0a0a; --scroll-thumb: #333333;
+}
+:root[data-palette="mono"][data-theme="light"] {
+  --bg: #fafafa; --surface: #ffffff; --surface-2: #f0f0f0; --line: #e2e2e2;
+  --bone: #0a0a0a; --muted: #525252; --faint: #8a8a8a;
+  --accent: #171717; --on-accent: #fafafa; --scroll-thumb: #cfcfcf;
+}
+
+/* Cobalt preset (was the base palette). */
+:root[data-palette="cobalt"] {
+  --bg: #0b0c0f; --surface: #121419; --surface-2: #1a1d24; --line: #262a33;
+  --bone: #f1f3f7; --muted: #9aa1b1; --faint: #697082;
+  --accent: #7aa2ff; --on-accent: #071226; --scroll-thumb: #323744;
+}
+:root[data-palette="cobalt"][data-theme="light"] {
+  --bg: #f7f8fa; --surface: #ffffff; --surface-2: #eef0f4; --line: #dfe3ea;
+  --bone: #0d1117; --muted: #4a5365; --faint: #7a8497;
+  --accent: #2152e8; --on-accent: #ffffff; --scroll-thumb: #c9cfdb;
+}
