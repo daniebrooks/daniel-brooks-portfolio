@@ -7,4 +7,4 @@ export const SITE_URL = (
 export const SITE_NAME = "Daniel Brooks";
 export const SITE_TITLE = "Daniel Brooks | Senior Software Engineer";
 export const SITE_DESCRIPTION =
-  "Senior software engineer with 8+ years in AI/ML and data engineering. Custom software, AI agents and automation, SaaS and API integration.";
+  "Senior software engineer with 10+ years in AI/ML and data engineering. Custom software, AI agents and automation, SaaS and API integration.";

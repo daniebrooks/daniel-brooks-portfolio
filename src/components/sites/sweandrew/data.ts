@@ -17,18 +17,18 @@ export const profile = {
   timeZone: "America/New_York",
   builds: ["SOFTWARE", "AI AGENTS", "SAAS PLATFORMS", "API INTEGRATION", "DATA PIPELINES"],
   intro:
-    "Freelance software engineer with 8+ years delivering scalable, secure software: custom development, AI agents and automation, SaaS and API integration.",
-  base: "8+ yrs",
+    "Freelance software engineer with 10+ years delivering scalable, secure software: custom development, AI agents and automation, SaaS and API integration.",
+  base: "10+ yrs",
   stackLine: "C# · Python · TS · .NET · React · Azure",
   about: [
-    "Software engineer with 8+ years of experience designing, developing, and delivering scalable, secure, high-performance software. I specialize in custom development, ASP.NET and .NET applications, AI agents and automation, web and SaaS products, and API and system integration.",
+    "Freelance software engineer with 10+ years of experience designing, developing, and delivering scalable, secure, and high-performance software solutions. I specialize in custom software development, ASP.NET and .NET applications, AI agents and automation, web and SaaS development, API and system integration, and cloud-based solutions. I build business applications, streamline workflows, and integrate intelligent technologies into reliable digital products tailored to specific business needs.",
     "My path runs from machine learning at Walmart through generative AI at Orthogonal and full-stack engineering at TheAMLab to leading a team at AS-P. I care about quality-driven, maintainable engineering that helps startups and established businesses scale and achieve long-term growth.",
   ],
   // Quick facts for the About card. Every value is stated in the CV.
   facts: [
     { label: "LOCATION", value: "Ashburn, Virginia, USA" }, // keep equal to profile.city
     { label: "CURRENT ROLE", value: "Senior Software Engineer & Team Lead at AS-P" },
-    { label: "EXPERIENCE", value: "8+ years" },
+    { label: "EXPERIENCE", value: "10+ years" },
     { label: "EDUCATION", value: "BSCS, University of the Punjab (2018)" },
   ],
   contact: {
@@ -172,7 +172,7 @@ export const stack = [
       "Azure AI Search",
       "BigQuery",
       "Dataflow",
-      "Dataproc",
+      "Dataproc (architecture familiarity)",
       "Docker",
       "Kubernetes",
       "AKS",
@@ -263,8 +263,8 @@ export const experience: Role[] = [
     ],
   },
   {
-    range: "MAY 2017 to JAN 2019",
-    duration: "1 yr 9 mos",
+    range: "MAY 2016 to JAN 2019",
+    duration: "2 yrs 9 mos",
     title: "Software Engineer, Machine Learning",
     org: "Walmart",
     place: "Remote",
