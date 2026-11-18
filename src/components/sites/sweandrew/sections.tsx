@@ -526,6 +526,7 @@ type Row = { label: string; value: string; href: string; icon: string; download?
 export function Contact() {
   const c = profile.contact;
   const rows = [
+    c.calendly && { label: "BOOK A CALL", value: c.calendly.handle, href: c.calendly.url, icon: "calendar" },
     { label: "EMAIL", value: c.email, href: `mailto:${c.email}`, icon: "email" },
     c.phone && { label: "PHONE", value: c.phone, href: `tel:${c.phone.replace(/\s/g, "")}`, icon: "phone" },
     c.phone && c.whatsapp && {
@@ -551,7 +552,7 @@ export function Contact() {
         <SectionHeader
           index="04"
           title="Contact"
-          lede="Reach out by email or LinkedIn."
+          lede="Book a call, or reach out by email or LinkedIn."
           className="mb-12"
         />
         <motion.h2

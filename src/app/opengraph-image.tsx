@@ -30,7 +30,7 @@ export default function Image() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 28, color: "#6b6b6b" }}>
           <span>AI/ML and Data Engineering</span>
-          <span>Ashburn, Virginia, USA</span>
+          <span>Lahore, Punjab, Pakistan</span>
         </div>
       </div>
     ),

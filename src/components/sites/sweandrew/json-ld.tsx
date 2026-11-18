@@ -11,7 +11,7 @@ const person = {
   description: SITE_DESCRIPTION,
   url: `${SITE_URL}/`,
   email: `mailto:${profile.contact.email}`,
-  address: { "@type": "PostalAddress", addressLocality: "Ashburn", addressRegion: "VA", addressCountry: "US" },
+  address: { "@type": "PostalAddress", addressLocality: "Lahore", addressRegion: "Punjab", addressCountry: "PK" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "University of the Punjab" },
   sameAs: [profile.contact.linkedin?.url, profile.contact.github?.url].filter(Boolean),
   knowsAbout: [

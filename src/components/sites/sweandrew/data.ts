@@ -7,14 +7,15 @@ type Contact = {
   github?: { handle: string; url: string };
   linkedin?: { handle: string; url: string };
   telegram?: { handle: string; url: string };
+  calendly?: { handle: string; url: string };
 };
 
 export const profile = {
   name: ["Daniel", "Brooks"],
   fullName: "DANIEL BROOKS",
   role: ["Senior", "Software", "Engineer"],
-  city: "Ashburn, Virginia, USA", // as written on the CV
-  timeZone: "America/New_York",
+  city: "Lahore, Punjab, Pakistan", // as written on the CV
+  timeZone: "Asia/Karachi",
   builds: ["SOFTWARE", "AI AGENTS", "SAAS PLATFORMS", "API INTEGRATION", "DATA PIPELINES"],
   intro:
     "Freelance software engineer with 10+ years delivering scalable, secure software: custom development, AI agents and automation, SaaS and API integration.",
@@ -26,16 +27,17 @@ export const profile = {
   ],
   // Quick facts for the About card. Every value is stated in the CV.
   facts: [
-    { label: "LOCATION", value: "Ashburn, Virginia, USA" }, // keep equal to profile.city
+    { label: "LOCATION", value: "Lahore, Punjab, Pakistan" }, // keep equal to profile.city
     { label: "CURRENT ROLE", value: "Senior Software Engineer & Team Lead at AS-P" },
     { label: "EXPERIENCE", value: "10+ years" },
     { label: "EDUCATION", value: "BSCS, University of the Punjab (2018)" },
   ],
   contact: {
     email: "daniel.brooks.ashburn@gmail.com",
-    phone: "+1 228 227 8781",
+    phone: "+92 306 4445292",
     github: { handle: "/daniebrooks", url: "https://github.com/daniebrooks" },
     linkedin: { handle: "/in/danielbrookswork", url: "https://www.linkedin.com/in/danielbrookswork/" },
+    calendly: { handle: "Book a 30-min call", url: "https://calendly.com/daniel-brooks-ashburn/30min" },
   } as Contact,
   cv: { href: "/Daniel_Brooks_CV.pdf", filename: "Daniel_Brooks_CV.pdf" },
 };
